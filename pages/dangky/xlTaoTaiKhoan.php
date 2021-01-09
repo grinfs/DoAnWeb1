@@ -33,16 +33,15 @@
           $sql = "INSERT INTO TaiKhoan(TenDangNhap,MatKhau,TenHienThi,DiaChi,DienThoai,Email,MaLoaiTaiKhoan,code) 
                   VALUES('$us','$ps','$name','$add','$tel','$mail',1,'$code')";
                     DataProvider::ExecuteQuery($sql);
+          //Lấy id của tài khoản để gửi email
           $sql1 = "SELECT MaTaiKhoan FROM TaiKhoan WHERE TenDangNhap='$us' AND MatKhau='$ps'";
           $result1 = DataProvider::ExecuteQuery($sql1);
           $row1 = mysqli_fetch_array($result1);
-
           $id = $row1["MaTaiKhoan"];
+         // Gửi email
           sendEmail($mail,'Kích hoạt tài khoản','Vui lòng click vào link <a href="http://acctive:8080/activate.php?id=' . $id . '&code=' . $code . '"> kích hoạt tài khoản.</a>');
 
           phpAlert(   "Tiến hành xác thực trước khi đăng nhập! \n\n"   );
-
-          $newURL = '../../index.php';
           header('Refresh: 0;../../index.php');
 
        }
