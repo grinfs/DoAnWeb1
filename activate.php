@@ -1,4 +1,4 @@
-<?php phpAlert(   "Xác thực thành công \\n\\nHãy tiến hành đăng nhập"   );  ?>
+<?php phpAlert(   "Đã xác thực thành công \\n\\nHãy tiến hành đăng nhập"   );  ?>
 
 <?php
 
