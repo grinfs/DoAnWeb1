@@ -41,7 +41,7 @@
          // Gửi email
           sendEmail($mail,'Kích hoạt tài khoản','Vui lòng click vào link <a href="http://acctive:8080/activate.php?id=' . $id . '&code=' . $code . '"> kích hoạt tài khoản.</a>');
 
-          phpAlert(   "Tiến hành xác thực trước khi đăng nhập! \n\n"   );
+          phpAlert(   "Vui lòng xác thực trước khi đăng nhập! \n\n"   );
           header('Refresh: 0;../../index.php');
 
        }
