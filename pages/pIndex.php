@@ -8,12 +8,9 @@ require_once('./lib/ItemCard.php');
 
 <!-- Page Content -->
 <div class="container">
-
   <div class="row">
-
     <!-- .col-lg-3 SIDE -->
     <div class="col-lg-3">
-
       <?php
       $side = 1;
       if (isset($_GET["side"]) == true) #nếu có tham số truyền vào, mặc định là home
@@ -31,9 +28,7 @@ require_once('./lib/ItemCard.php');
       }
       ?>
       <?php
-
       ?>
-
     </div>
     <!-- /.col-lg-3 -->
 
